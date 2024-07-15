@@ -27,7 +27,7 @@ const Card: React.FC<CardProps> = ({ showContent }) => {
 
   if (!showContent) {
     return (
-      <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
+      <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md max-h-96 md:max-h-screen-md lg:max-h-screen-lg xl:max-h-screen-xl overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
         <p>No content to display</p>
       </div>
     );
@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = ({ showContent }) => {
   if (isError) return <p>Error fetching data</p>;
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
+    <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md max-h-96 md:max-h-screen-md lg:max-h-screen-lg xl:max-h-screen-xl overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
       {data?.map((post) => (
         <div key={post.id} className="mb-4">
           <h2 className="text-lg font-bold mb-2">Post Details</h2>
